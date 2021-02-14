@@ -1,0 +1,66 @@
+# https://github.com/tektoncd/pipeline/blob/release-v0.20.x/docs/resources.md#cluster-resource
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: test-cluster
+spec:
+  type: cluster
+  params:
+    - name: url
+      value: https://10.10.10.10 # url to the cluster master node
+    - name: cadata
+      value: LS0tLS1CRUdJTiBDRVJ.....
+    - name: token
+      value: ZXlKaGJHY2lPaU....
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: target-cluster-secrets
+data:
+  cadatakey: LS0tLS1CRUdJTiBDRVJUSUZ......tLQo=
+  tokenkey: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbX....M2ZiCg==
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: test-cluster
+spec:
+  type: cluster
+  params:
+    - name: url
+      value: https://10.10.10.10
+    - name: username
+      value: admin
+  secrets:
+    - fieldName: token
+      secretKey: tokenKey
+      secretName: target-cluster-secrets
+    - fieldName: cadata
+      secretKey: cadataKey
+      secretName: target-cluster-secrets
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: deploy-image
+  namespace: default
+spec:
+  resources:
+    inputs:
+      - name: workspace
+        type: git
+      - name: dockerimage
+        type: image
+      - name: test-cluster
+        type: cluster
+  steps:
+    - name: deploy
+      image: image-with-kubectl
+      command: ["bash"]
+      args:
+        - "-c"
+        - kubectl --kubeconfig
+          /workspace/$(resources.inputs.test-cluster.name)/kubeconfig --context
+          $(resources.inputs.test-cluster.name) apply -f /workspace/service.yaml'

@@ -1,0 +1,41 @@
+# https://github.com/tektoncd/pipeline/blob/release-v0.20.x/docs/resources.md#cloud-event-resource
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: event-to-sink
+spec:
+  type: cloudEvent
+  params:
+  - name: targetURI
+    value: http://sink:8080
+---
+# The content of an event is:
+# Context Attributes,
+#   SpecVersion: 0.2
+#   Type: dev.tekton.event.task.successful
+#   Source: /apis/tekton.dev/v1beta1/namespaces/default/taskruns/pipeline-run-api-16aa55-source-to-image-task-rpndl
+#   ID: pipeline-run-api-16aa55-source-to-image-task-rpndl
+#   Time: 2019-07-04T11:03:53.058694712Z
+#   ContentType: application/json
+# Transport Context,
+#   URI: /
+#   Host: my-sink.default.my-cluster.containers.appdomain.cloud
+#   Method: POST
+# Data,
+#   {
+#     "taskRun": {
+#       "metadata": {...}
+#       "spec": {
+#         "inputs": {...}
+#         "outputs": {...}
+#         "serviceAccount": "default",
+#         "taskRef": {
+#           "name": "source-to-image",
+#           "kind": "Task"
+#         },
+#         "timeout": "1h0m0s"
+#       },
+#       "status": {...}
+#     }
+#   }

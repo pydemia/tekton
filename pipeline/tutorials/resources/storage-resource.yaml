@@ -1,0 +1,36 @@
+# https://github.com/tektoncd/pipeline/blob/release-v0.20.x/docs/resources.md#storage-resource
+
+# GCS Type
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: wizzbang-storage
+  namespace: default
+spec:
+  type: storage
+  params:
+    - name: type
+      value: gcs
+    - name: location
+      value: gs://some-bucket
+    - name: dir
+      value: "y" # This can have any value to be considered "true"
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: wizzbang-storage
+  namespace: default
+spec:
+  type: storage
+  params:
+    - name: type
+      value: gcs
+    - name: location
+      value: gs://some-private-bucket
+    - name: dir
+      value: "y"
+  secrets:
+    - fieldName: GOOGLE_APPLICATION_CREDENTIALS
+      secretName: bucket-sa
+      secretKey: service_account.json

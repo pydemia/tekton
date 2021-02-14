@@ -1,0 +1,18 @@
+# https://github.com/tektoncd/pipeline/blob/release-v0.20.x/docs/resources.md#git-resource
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: wizzbang-git
+  namespace: default
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/wizzbangcorp/wizzbang.git
+    - name: revision
+      value: master
+    # - name: noProxy
+    #   value: "no.proxy.com"
+    # - name: httpsProxy
+    #   value: "my-enterprise.proxy.com"

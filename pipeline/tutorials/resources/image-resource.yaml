@@ -1,0 +1,30 @@
+# https://github.com/tektoncd/pipeline/blob/release-v0.20.x/docs/resources.md#image-resource
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: kritis-resources-image
+  namespace: default
+spec:
+  type: image
+  params:
+    - name: url
+      value: gcr.io/staging-images/kritis
+---
+# kubectl create secret docker-registry regcred
+apiVersion: v1
+type: kubernetes.io/dockerconfigjson
+kind: Secret
+metadata:
+  name: regcred
+  namespace: default
+data:
+  .dockerconfigjson: xxxx
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tutorial-service
+secrets:
+  - name: regcred
+---
