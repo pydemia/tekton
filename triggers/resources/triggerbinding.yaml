@@ -1,0 +1,14 @@
+# https://github.com/tektoncd/triggers/blob/release-v0.11.x/docs/triggerbindings.md
+
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: pipeline-binding
+spec:
+  params:
+  - name: gitrevision
+    value: $(body.head_commit.id)
+  - name: gitrepositoryurl
+    value: $(body.repository.url)
+  - name: contenttype
+    value: $(header.Content-Type)

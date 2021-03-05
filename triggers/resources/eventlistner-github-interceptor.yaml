@@ -1,0 +1,22 @@
+# https://github.com/tektoncd/triggers/blob/release-v0.11.x/docs/eventlisteners.md#github-interceptors
+
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: listener-interceptor
+spec:
+  serviceAccountName: tekton-triggers-example-sa
+  triggers:
+    - name: github-listener
+      interceptors:
+        - github:
+            secretRef:
+              secretName: github-secret
+              secretKey: secretToken
+            # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads
+            eventTypes: ["pull_request", "push", "release"]
+      bindings:
+        - ref: pipeline-binding
+      template:
+        ref: pipeline-template

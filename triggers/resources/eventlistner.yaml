@@ -1,0 +1,31 @@
+# https://github.com/tektoncd/triggers/blob/release-v0.11.x/docs/eventlisteners.md
+
+# Response:
+# @eventListener - Refers to the EventListener Name.
+# @namespace - Refers to the namespace of the EventListener
+# @eventID - Refers to the uniqueID that gets assigned to each incoming request
+
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: gitlab-listener-interceptor
+spec:
+  serviceAccountName: tekton-triggers-example-sa
+  triggers:
+    - name: foo-trig
+      interceptors:
+        - gitlab:
+            secretRef:
+              secretName: foo
+              secretKey: bar
+            eventTypes:
+              - Push Hook
+      bindings:
+        - ref: pipeline-clusterbinding
+          kind: ClusterTriggerBinding
+        - ref: message-clusterbinding
+          kind: ClusterTriggerBinding
+        # default: TriggerBinding 
+        - ref: pipeline-binding
+      template:
+        ref: pipeline-template

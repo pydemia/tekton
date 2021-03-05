@@ -1,0 +1,27 @@
+# https://github.com/tektoncd/triggers/blob/release-v0.11.x/docs/eventlisteners.md#chaining-interceptors
+
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: bitbucket-listener
+spec:
+  serviceAccountName: tekton-triggers-bitbucket-sa
+  triggers:
+    - name: bitbucket-triggers
+      interceptors:
+        - cel:
+            overlays:
+              - key: "truncated_sha"
+                expression: "body.sha.truncate(5)"
+        - webhook:
+          objectRef:
+            kind: Service
+            name: some-interceptor
+            apiVersion: v1
+        - cel:
+            filter: "body.extensions.truncated_sha == \"abcde\"" # Can also be extensions.truncated_sha == \"abcde\"
+      bindings:
+        - ref: bitbucket-binding
+      template:
+        ref: bitbucket-template

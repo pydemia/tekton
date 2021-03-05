@@ -1,0 +1,39 @@
+# https://github.com/tektoncd/triggers/blob/release-v0.11.x/docs/eventlisteners.md#cel-interceptors
+
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: bitbucket-listener
+spec:
+  serviceAccountName: tekton-triggers-bitbucket-sa
+  # triggers:
+  #   - name: cel-trig-with-matches
+  #     interceptors:
+  #       - cel:
+  #           filter: "header.match('X-GitHub-Event', 'pull_request')"
+            # overlays:
+            # - key: truncated_sha
+            #   expression: "body.pull_request.head.sha.truncate(7)"
+            # - key: extensions.truncated_sha
+            #   expression: "body.pull_request.head.sha.truncate(7)"
+            # - key: extensions.branch_name
+            #   expression: "body.ref.split('/')[2]"
+  #     bindings:
+  #     - name: sha
+  #       value: $(extensions.truncated_sha)
+  triggers:
+    - name: cel-trig
+      interceptors:
+        - cel:
+            overlays:
+            # - key: truncated_sha
+            #   expression: "body.pull_request.head.sha.truncate(7)"
+            - key: extensions.truncated_sha
+              expression: "body.pull_request.head.sha.truncate(7)"
+            - key: extensions.branch_name
+              expression: "body.ref.split('/')[2]"
+      bindings:
+      - ref: pipeline-binding
+      template:
+        ref: pipeline-template
