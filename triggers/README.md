@@ -50,7 +50,7 @@ $ kubectl apply -f tekton-pipelines-release.yaml \
 > Mostly the bumps between them are **annotations** and some advances, except `clusterrole` & `clusterrolebinding` names, which are the only things that newly created; it does not exist in the higher `pipelines` version anymore.
 > (e.g. `tekton-pipelines-controller-admin`: `v0.11.2` -> `tekton-pipelines-controller-cluster-access`: `v0.20.1`)
 > If you want to use the higher `pipelines` version, you should re-install(overwrite) the `tekton-pipelines-release.yaml` again.
-> When reinstalling, you would meet this error: `Internal error occurred: failed calling webhook "config.webhook.pipeline.tekton.dev": Post https://tekton-pipelines-webhook.tekton-pipelines.svc:443/config-validation?timeout=10s: no endpoints available for service "tekton-pipelines-webhook"`. Wait for restart the webhook and just do it again.
+> **_When reinstalling, you would meet this error_**: `Internal error occurred: failed calling webhook "config.webhook.pipeline.tekton.dev": Post https://tekton-pipelines-webhook.tekton-pipelines.svc:443/config-validation?timeout=10s: no endpoints available for service "tekton-pipelines-webhook"`. Wait for restart the webhook and just do it again.
 
 
 Monitor the installation

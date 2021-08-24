@@ -1,0 +1,706 @@
+E0319 06:11:23.786716      17 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+INFO[0001] Retrieving image manifest python:3.7-slim    
+INFO[0001] Retrieving image python:3.7-slim from registry index.docker.io 
+E0319 06:11:24.632364      17 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+INFO[0001] Built cross stage deps: map[]                
+INFO[0001] Retrieving image manifest python:3.7-slim    
+INFO[0001] Returning cached image manifest              
+INFO[0001] Executing 0 build triggers                   
+INFO[0001] Unpacking rootfs as cmd RUN apt-get update &&     apt-get install --no-install-recommends -y git requires it. 
+INFO[0004] LABEL maintainer="pydemia@gmail.com"         
+INFO[0004] Applying label maintainer=pydemia@gmail.com  
+INFO[0004] RUN apt-get update &&     apt-get install --no-install-recommends -y git 
+INFO[0004] Taking snapshot of full filesystem...        
+INFO[0006] cmd: /bin/sh                                 
+INFO[0006] args: [-c apt-get update &&     apt-get install --no-install-recommends -y git] 
+INFO[0006] Running: [/bin/sh -c apt-get update &&     apt-get install --no-install-recommends -y git] 
+Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+Get:2 http://deb.debian.org/debian buster InRelease [122 kB]
+Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [269 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [9504 B]
+Fetched 8424 kB in 2s (3405 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgssapi-krb5-2
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2
+  libldap-common libnghttp2-14 libpcre2-8-0 libperl5.28 libpsl5 librtmp1
+  libsasl2-2 libsasl2-modules-db libssh2-1 perl perl-modules-5.28
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-el git-email
+  git-gui gitk gitweb git-cvs git-mediawiki git-svn krb5-doc krb5-user
+  sensible-utils perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libb-debug-perl liblocale-codes-perl
+Recommended packages:
+  patch less ssh-client krb5-locales publicsuffix libsasl2-modules
+The following NEW packages will be installed:
+  git git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgssapi-krb5-2
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2
+  libldap-common libnghttp2-14 libpcre2-8-0 libperl5.28 libpsl5 librtmp1
+  libsasl2-2 libsasl2-modules-db libssh2-1 perl perl-modules-5.28
+0 upgraded, 22 newly installed, 0 to remove and 0 not upgraded.
+Need to get 16.4 MB of archives.
+After this operation, 90.1 MB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security buster/updates/main amd64 libldap-common all 2.4.47+dfsg-3+deb10u6 [90.0 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 perl-modules-5.28 all 5.28.1-6+deb10u1 [2873 kB]
+Get:3 http://security.debian.org/debian-security buster/updates/main amd64 libldap-2.4-2 amd64 2.4.47+dfsg-3+deb10u6 [224 kB]
+Get:4 http://deb.debian.org/debian buster/main amd64 libgdbm-compat4 amd64 1.18.1-4 [44.1 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 libperl5.28 amd64 5.28.1-6+deb10u1 [3894 kB]
+Get:6 http://deb.debian.org/debian buster/main amd64 perl amd64 5.28.1-6+deb10u1 [204 kB]
+Get:7 http://deb.debian.org/debian buster/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-1+deb10u1 [69.1 kB]
+Get:8 http://deb.debian.org/debian buster/main amd64 libsasl2-2 amd64 2.1.27+dfsg-1+deb10u1 [106 kB]
+Get:9 http://deb.debian.org/debian buster/main amd64 libkeyutils1 amd64 1.6-6 [15.0 kB]
+Get:10 http://deb.debian.org/debian buster/main amd64 libkrb5support0 amd64 1.17-3+deb10u1 [65.8 kB]
+Get:11 http://deb.debian.org/debian buster/main amd64 libk5crypto3 amd64 1.17-3+deb10u1 [122 kB]
+Get:12 http://deb.debian.org/debian buster/main amd64 libkrb5-3 amd64 1.17-3+deb10u1 [369 kB]
+Get:13 http://deb.debian.org/debian buster/main amd64 libgssapi-krb5-2 amd64 1.17-3+deb10u1 [158 kB]
+Get:14 http://deb.debian.org/debian buster/main amd64 libnghttp2-14 amd64 1.36.0-2+deb10u1 [85.0 kB]
+Get:15 http://deb.debian.org/debian buster/main amd64 libpsl5 amd64 0.20.2-2 [53.7 kB]
+Get:16 http://deb.debian.org/debian buster/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2 [60.5 kB]
+Get:17 http://deb.debian.org/debian buster/main amd64 libssh2-1 amd64 1.8.0-2.1 [140 kB]
+Get:18 http://deb.debian.org/debian buster/main amd64 libcurl3-gnutls amd64 7.64.0-4+deb10u1 [330 kB]
+Get:19 http://deb.debian.org/debian buster/main amd64 libpcre2-8-0 amd64 10.32-5 [213 kB]
+Get:20 http://deb.debian.org/debian buster/main amd64 liberror-perl all 0.17027-2 [30.9 kB]
+Get:21 http://deb.debian.org/debian buster/main amd64 git-man all 1:2.20.1-2+deb10u3 [1620 kB]
+Get:22 http://deb.debian.org/debian buster/main amd64 git amd64 1:2.20.1-2+deb10u3 [5633 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 16.4 MB in 0s (40.1 MB/s)
+Selecting previously unselected package perl-modules-5.28.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6840 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.28_5.28.1-6+deb10u1_all.deb ...
+Unpacking perl-modules-5.28 (5.28.1-6+deb10u1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../01-libgdbm-compat4_1.18.1-4_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.18.1-4) ...
+Selecting previously unselected package libperl5.28:amd64.
+Preparing to unpack .../02-libperl5.28_5.28.1-6+deb10u1_amd64.deb ...
+Unpacking libperl5.28:amd64 (5.28.1-6+deb10u1) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../03-perl_5.28.1-6+deb10u1_amd64.deb ...
+Unpacking perl (5.28.1-6+deb10u1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../04-libsasl2-modules-db_2.1.27+dfsg-1+deb10u1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../05-libsasl2-2_2.1.27+dfsg-1+deb10u1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../06-libldap-common_2.4.47+dfsg-3+deb10u6_all.deb ...
+Unpacking libldap-common (2.4.47+dfsg-3+deb10u6) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../07-libldap-2.4-2_2.4.47+dfsg-3+deb10u6_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u6) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../08-libkeyutils1_1.6-6_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../09-libkrb5support0_1.17-3+deb10u1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.17-3+deb10u1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../10-libk5crypto3_1.17-3+deb10u1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.17-3+deb10u1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../11-libkrb5-3_1.17-3+deb10u1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.17-3+deb10u1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../12-libgssapi-krb5-2_1.17-3+deb10u1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.17-3+deb10u1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../13-libnghttp2-14_1.36.0-2+deb10u1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../14-libpsl5_0.20.2-2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.20.2-2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../15-librtmp1_2.4+20151223.gitfa8646d.1-2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../16-libssh2-1_1.8.0-2.1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.8.0-2.1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../17-libcurl3-gnutls_7.64.0-4+deb10u1_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libpcre2-8-0:amd64.
+Preparing to unpack .../18-libpcre2-8-0_10.32-5_amd64.deb ...
+Unpacking libpcre2-8-0:amd64 (10.32-5) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../19-liberror-perl_0.17027-2_all.deb ...
+Unpacking liberror-perl (0.17027-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../20-git-man_1%3a2.20.1-2+deb10u3_all.deb ...
+Unpacking git-man (1:2.20.1-2+deb10u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../21-git_1%3a2.20.1-2+deb10u3_amd64.deb ...
+Unpacking git (1:2.20.1-2+deb10u3) ...
+Setting up perl-modules-5.28 (5.28.1-6+deb10u1) ...
+Setting up libkeyutils1:amd64 (1.6-6) ...
+Setting up libpsl5:amd64 (0.20.2-2) ...
+Setting up libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Setting up libldap-common (2.4.47+dfsg-3+deb10u6) ...
+Setting up libkrb5support0:amd64 (1.17-3+deb10u1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Setting up libgdbm-compat4:amd64 (1.18.1-4) ...
+Setting up libpcre2-8-0:amd64 (10.32-5) ...
+Setting up libk5crypto3:amd64 (1.17-3+deb10u1) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Setting up libperl5.28:amd64 (5.28.1-6+deb10u1) ...
+Setting up git-man (1:2.20.1-2+deb10u3) ...
+Setting up libssh2-1:amd64 (1.8.0-2.1) ...
+Setting up libkrb5-3:amd64 (1.17-3+deb10u1) ...
+Setting up libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u6) ...
+Setting up perl (5.28.1-6+deb10u1) ...
+Setting up libgssapi-krb5-2:amd64 (1.17-3+deb10u1) ...
+Setting up libcurl3-gnutls:amd64 (7.64.0-4+deb10u1) ...
+Setting up liberror-perl (0.17027-2) ...
+Setting up git (1:2.20.1-2+deb10u3) ...
+Processing triggers for libc-bin (2.28-10) ...
+INFO[0015] Taking snapshot of full filesystem...        
+INFO[0018] ENV MODEL_NAME="model"                       
+INFO[0018] ENV HTTP_PORT=8080                           
+INFO[0018] ENV GRPC_PORT=8081                           
+INFO[0018] ENV MODEL_DIR="/mnt/models"                  
+INFO[0018] RUN mkdir -p /workdir                        
+INFO[0018] cmd: /bin/sh                                 
+INFO[0018] args: [-c mkdir -p /workdir]                 
+INFO[0018] Running: [/bin/sh -c mkdir -p /workdir]      
+INFO[0018] Taking snapshot of full filesystem...        
+INFO[0019] WORKDIR /workdir                             
+INFO[0019] cmd: workdir                                 
+INFO[0019] Changed working directory to /workdir        
+INFO[0019] No files changed in this command, skipping snapshotting. 
+INFO[0019] COPY sklearnserver sklearnserver             
+INFO[0019] Taking snapshot of files...                  
+INFO[0019] COPY setup.py setup.py                       
+INFO[0019] Taking snapshot of files...                  
+INFO[0019] COPY requirements.txt requirements.txt       
+INFO[0019] Taking snapshot of files...                  
+INFO[0019] COPY README.md README.md                     
+INFO[0019] Taking snapshot of files...                  
+INFO[0019] COPY run_sklearnserver /usr/local/bin/run_sklearnserver 
+INFO[0019] Taking snapshot of files...                  
+INFO[0019] RUN pip install --upgrade pip &&     pip install -e . &&     pip install -r ./requirements.txt 
+INFO[0019] cmd: /bin/sh                                 
+INFO[0019] args: [-c pip install --upgrade pip &&     pip install -e . &&     pip install -r ./requirements.txt] 
+INFO[0019] Running: [/bin/sh -c pip install --upgrade pip &&     pip install -e . &&     pip install -r ./requirements.txt] 
+Requirement already satisfied: pip in /usr/local/lib/python3.7/site-packages (21.0.1)
+Obtaining file:///workdir
+Collecting kfserving>=0.5.0
+  Downloading kfserving-0.5.1-py3-none-any.whl (276 kB)
+Collecting scikit-learn>=0.20.3
+  Downloading scikit_learn-0.24.1-cp37-cp37m-manylinux2010_x86_64.whl (22.3 MB)
+Collecting joblib>=0.13.0
+  Downloading joblib-1.0.1-py3-none-any.whl (303 kB)
+Collecting tornado>=6.0.0
+  Downloading tornado-6.1-cp37-cp37m-manylinux2010_x86_64.whl (428 kB)
+Collecting azure-storage-blob<=2.1.0,>=1.3.0
+  Downloading azure_storage_blob-2.1.0-py2.py3-none-any.whl (88 kB)
+Collecting cloudevents>=1.2.0
+  Downloading cloudevents-1.2.0-py3-none-any.whl (26 kB)
+Collecting certifi>=14.05.14
+  Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+Collecting kubernetes>=12.0.0
+  Downloading kubernetes-12.0.1-py2.py3-none-any.whl (1.7 MB)
+Requirement already satisfied: setuptools>=21.0.0 in /usr/local/lib/python3.7/site-packages (from kfserving>=0.5.0->sklearnserver==0.1.0) (54.1.1)
+Collecting numpy>=1.17.3
+  Downloading numpy-1.20.1-cp37-cp37m-manylinux2010_x86_64.whl (15.3 MB)
+Collecting avro>=1.10.1
+  Downloading avro-1.10.2.tar.gz (68 kB)
+Collecting argparse>=1.4.0
+  Downloading argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Collecting urllib3>=1.15.1
+  Downloading urllib3-1.26.4-py2.py3-none-any.whl (153 kB)
+Collecting google-cloud-storage>=1.31.0
+  Downloading google_cloud_storage-1.36.2-py2.py3-none-any.whl (97 kB)
+Collecting python-dateutil>=2.5.3
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting six>=1.15
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting table-logger>=0.3.5
+  Downloading table_logger-0.3.6-py3-none-any.whl (14 kB)
+Collecting minio<7.0.0,>=4.0.9
+  Downloading minio-6.0.2-py2.py3-none-any.whl (73 kB)
+Collecting adal>=1.2.2
+  Downloading adal-1.2.6-py2.py3-none-any.whl (55 kB)
+Collecting PyJWT<3,>=1.0.0
+  Downloading PyJWT-2.0.1-py3-none-any.whl (15 kB)
+Collecting cryptography>=1.1.0
+  Downloading cryptography-3.4.6-cp36-abi3-manylinux2014_x86_64.whl (3.2 MB)
+Collecting requests<3,>=2.0.0
+  Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+Collecting azure-common>=1.1.5
+  Downloading azure_common-1.1.26-py2.py3-none-any.whl (12 kB)
+Collecting azure-storage-common~=2.1
+  Downloading azure_storage_common-2.1.0-py2.py3-none-any.whl (47 kB)
+Collecting deprecation<3.0,>=2.0
+  Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Collecting cffi>=1.12
+  Downloading cffi-1.14.5-cp37-cp37m-manylinux1_x86_64.whl (402 kB)
+Collecting pycparser
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+Collecting packaging
+  Downloading packaging-20.9-py2.py3-none-any.whl (40 kB)
+Collecting google-resumable-media<2.0dev,>=1.2.0
+  Downloading google_resumable_media-1.2.0-py2.py3-none-any.whl (75 kB)
+Collecting google-auth<2.0dev,>=1.11.0
+  Downloading google_auth-1.28.0-py2.py3-none-any.whl (136 kB)
+Collecting google-cloud-core<2.0dev,>=1.4.1
+  Downloading google_cloud_core-1.6.0-py2.py3-none-any.whl (28 kB)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting cachetools<5.0,>=2.0.0
+  Downloading cachetools-4.2.1-py3-none-any.whl (12 kB)
+Collecting rsa<5,>=3.1.4
+  Downloading rsa-4.7.2-py3-none-any.whl (34 kB)
+Collecting google-api-core<2.0.0dev,>=1.21.0
+  Downloading google_api_core-1.26.1-py2.py3-none-any.whl (92 kB)
+Collecting protobuf>=3.12.0
+  Downloading protobuf-3.15.6-cp37-cp37m-manylinux1_x86_64.whl (1.0 MB)
+Collecting pytz
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+Collecting googleapis-common-protos<2.0dev,>=1.6.0
+  Downloading googleapis_common_protos-1.53.0-py2.py3-none-any.whl (198 kB)
+Collecting google-crc32c<2.0dev,>=1.0
+  Downloading google_crc32c-1.1.2-cp37-cp37m-manylinux2014_x86_64.whl (38 kB)
+Collecting requests-oauthlib
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting pyyaml>=3.12
+  Downloading PyYAML-5.4.1-cp37-cp37m-manylinux1_x86_64.whl (636 kB)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0
+  Downloading websocket_client-0.58.0-py2.py3-none-any.whl (61 kB)
+Collecting configparser
+  Downloading configparser-5.0.2-py3-none-any.whl (19 kB)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Collecting chardet<5,>=3.0.2
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+Collecting idna<3,>=2.5
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting scipy>=0.19.1
+  Downloading scipy-1.6.1-cp37-cp37m-manylinux1_x86_64.whl (27.4 MB)
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.1.0-py2.py3-none-any.whl (147 kB)
+Building wheels for collected packages: avro
+  Building wheel for avro (setup.py): started
+  Building wheel for avro (setup.py): finished with status 'done'
+  Created wheel for avro: filename=avro-1.10.2-py3-none-any.whl size=96830 sha256=da36de5cb058171ae18a3db97f996e4ad292aa4861746f70d3eae1853f24cfa7
+  Stored in directory: /root/.cache/pip/wheels/e7/93/e8/7e16388beb0837cbfb9065ff9d3fe33e4111a3f4bedea1c2c6
+Successfully built avro
+Installing collected packages: six, pyasn1, urllib3, rsa, pyparsing, pycparser, pyasn1-modules, protobuf, idna, chardet, certifi, cachetools, requests, pytz, packaging, googleapis-common-protos, google-auth, cffi, python-dateutil, oauthlib, google-crc32c, google-api-core, cryptography, azure-common, websocket-client, requests-oauthlib, pyyaml, PyJWT, numpy, google-resumable-media, google-cloud-core, deprecation, configparser, azure-storage-common, tornado, threadpoolctl, table-logger, scipy, minio, kubernetes, joblib, google-cloud-storage, cloudevents, azure-storage-blob, avro, argparse, adal, scikit-learn, kfserving, sklearnserver
+  Running setup.py develop for sklearnserver
+Successfully installed PyJWT-2.0.1 adal-1.2.6 argparse-1.4.0 avro-1.10.2 azure-common-1.1.26 azure-storage-blob-2.1.0 azure-storage-common-2.1.0 cachetools-4.2.1 certifi-2020.12.5 cffi-1.14.5 chardet-4.0.0 cloudevents-1.2.0 configparser-5.0.2 cryptography-3.4.6 deprecation-2.1.0 google-api-core-1.26.1 google-auth-1.28.0 google-cloud-core-1.6.0 google-cloud-storage-1.36.2 google-crc32c-1.1.2 google-resumable-media-1.2.0 googleapis-common-protos-1.53.0 idna-2.10 joblib-1.0.1 kfserving-0.5.1 kubernetes-12.0.1 minio-6.0.2 numpy-1.20.1 oauthlib-3.1.0 packaging-20.9 protobuf-3.15.6 pyasn1-0.4.8 pyasn1-modules-0.2.8 pycparser-2.20 pyparsing-2.4.7 python-dateutil-2.8.1 pytz-2021.1 pyyaml-5.4.1 requests-2.25.1 requests-oauthlib-1.3.0 rsa-4.7.2 scikit-learn-0.24.1 scipy-1.6.1 six-1.15.0 sklearnserver table-logger-0.3.6 threadpoolctl-2.1.0 tornado-6.1 urllib3-1.26.4 websocket-client-0.58.0
+Looking in indexes: https://pypi.python.org/simple/
+Collecting pycaret
+  Cloning https://github.com/skcc-asset-platform/pycaret to /tmp/pip-install-v2hkl6ls/pycaret_cfdc393f75be4e8193e26ccd2781f3ab
+  Running command git clone -q https://github.com/skcc-asset-platform/pycaret /tmp/pip-install-v2hkl6ls/pycaret_cfdc393f75be4e8193e26ccd2781f3ab
+Collecting accutuning_helpers
+  Cloning https://github.com/skcc-asset-platform/accutuning_helpers (to revision v1.0.18) to /tmp/pip-install-v2hkl6ls/accutuning-helpers_f0a4f7f1bfa448db9eb101b5f65559cc
+  Running command git clone -q https://github.com/skcc-asset-platform/accutuning_helpers /tmp/pip-install-v2hkl6ls/accutuning-helpers_f0a4f7f1bfa448db9eb101b5f65559cc
+Collecting scikit-learn==0.23.2
+  Downloading scikit_learn-0.23.2-cp37-cp37m-manylinux1_x86_64.whl (6.8 MB)
+Collecting pandas
+  Downloading pandas-1.2.3-cp37-cp37m-manylinux1_x86_64.whl (9.9 MB)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.7/site-packages (from pycaret->-r ./requirements.txt (line 12)) (1.20.1)
+Collecting seaborn
+  Downloading seaborn-0.11.1-py3-none-any.whl (285 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.3.4-cp37-cp37m-manylinux1_x86_64.whl (11.5 MB)
+Collecting IPython
+  Downloading ipython-7.21.0-py3-none-any.whl (784 kB)
+Requirement already satisfied: joblib in /usr/local/lib/python3.7/site-packages (from pycaret->-r ./requirements.txt (line 12)) (1.0.1)
+Collecting ipywidgets
+  Downloading ipywidgets-7.6.3-py2.py3-none-any.whl (121 kB)
+Collecting yellowbrick>=1.0.1
+  Downloading yellowbrick-1.3.post1-py3-none-any.whl (271 kB)
+Collecting xgboost>=1.1.0
+  Downloading xgboost-1.3.3-py3-none-manylinux2010_x86_64.whl (157.5 MB)
+Collecting lightgbm>=2.3.1
+  Downloading lightgbm-3.1.1-py2.py3-none-manylinux1_x86_64.whl (1.8 MB)
+Collecting plotly>=4.4.1
+  Downloading plotly-4.14.3-py2.py3-none-any.whl (13.2 MB)
+Collecting wordcloud
+  Downloading wordcloud-1.8.1-cp37-cp37m-manylinux1_x86_64.whl (366 kB)
+Collecting textblob
+  Downloading textblob-0.15.3-py2.py3-none-any.whl (636 kB)
+Collecting cufflinks>=0.17.0
+  Downloading cufflinks-0.17.3.tar.gz (81 kB)
+Collecting umap-learn
+  Downloading umap-learn-0.5.1.tar.gz (80 kB)
+Collecting pyLDAvis
+  Downloading pyLDAvis-3.2.2.tar.gz (1.7 MB)
+Collecting gensim
+  Downloading gensim-3.8.3-cp37-cp37m-manylinux1_x86_64.whl (24.2 MB)
+Collecting spacy
+  Downloading spacy-3.0.5-cp37-cp37m-manylinux2014_x86_64.whl (12.8 MB)
+Collecting nltk
+  Downloading nltk-3.5.zip (1.4 MB)
+Collecting mlxtend
+  Downloading mlxtend-0.18.0-py2.py3-none-any.whl (1.3 MB)
+Collecting pyod
+  Downloading pyod-0.8.7.tar.gz (101 kB)
+Collecting catboost>=0.23.2
+  Downloading catboost-0.24.4-cp37-none-manylinux1_x86_64.whl (65.7 MB)
+Collecting pandas-profiling>=2.8.0
+  Downloading pandas_profiling-2.11.0-py2.py3-none-any.whl (243 kB)
+Collecting kmodes>=0.10.1
+  Downloading kmodes-0.11.0-py2.py3-none-any.whl (18 kB)
+Collecting mlflow
+  Downloading mlflow-1.14.1-py3-none-any.whl (14.2 MB)
+Collecting imbalanced-learn>=0.7.0
+  Downloading imbalanced_learn-0.8.0-py3-none-any.whl (206 kB)
+Collecting scikit-plot
+  Downloading scikit_plot-0.3.7-py3-none-any.whl (33 kB)
+Requirement already satisfied: scipy>=0.19.1 in /usr/local/lib/python3.7/site-packages (from scikit-learn==0.23.2->-r ./requirements.txt (line 10)) (1.6.1)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /usr/local/lib/python3.7/site-packages (from scikit-learn==0.23.2->-r ./requirements.txt (line 10)) (2.1.0)
+Collecting graphviz
+  Downloading graphviz-0.16-py2.py3-none-any.whl (19 kB)
+Requirement already satisfied: six in /usr/local/lib/python3.7/site-packages (from catboost>=0.23.2->pycaret->-r ./requirements.txt (line 12)) (1.15.0)
+Collecting colorlover>=0.2.1
+  Downloading colorlover-0.3.0-py3-none-any.whl (8.9 kB)
+Requirement already satisfied: setuptools>=34.4.1 in /usr/local/lib/python3.7/site-packages (from cufflinks>=0.17.0->pycaret->-r ./requirements.txt (line 12)) (54.1.1)
+Collecting imbalanced-learn>=0.7.0
+  Downloading imbalanced_learn-0.7.0-py3-none-any.whl (167 kB)
+Collecting traitlets>=4.2
+  Downloading traitlets-5.0.5-py3-none-any.whl (100 kB)
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+  Downloading prompt_toolkit-3.0.17-py3-none-any.whl (367 kB)
+Collecting pygments
+  Downloading Pygments-2.8.1-py3-none-any.whl (983 kB)
+Collecting backcall
+  Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Collecting pickleshare
+  Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Collecting pexpect>4.3
+  Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting jedi>=0.16
+  Downloading jedi-0.18.0-py2.py3-none-any.whl (1.4 MB)
+Collecting decorator
+  Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+Collecting widgetsnbextension~=3.5.0
+  Downloading widgetsnbextension-3.5.1-py2.py3-none-any.whl (2.2 MB)
+Collecting ipykernel>=4.5.1
+  Downloading ipykernel-5.5.0-py3-none-any.whl (120 kB)
+Collecting jupyterlab-widgets>=1.0.0
+  Downloading jupyterlab_widgets-1.0.0-py3-none-any.whl (243 kB)
+Collecting nbformat>=4.2.0
+  Downloading nbformat-5.1.2-py3-none-any.whl (113 kB)
+Requirement already satisfied: tornado>=4.2 in /usr/local/lib/python3.7/site-packages (from ipykernel>=4.5.1->ipywidgets->pycaret->-r ./requirements.txt (line 12)) (6.1)
+Collecting jupyter-client
+  Downloading jupyter_client-6.1.12-py3-none-any.whl (112 kB)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading parso-0.8.1-py2.py3-none-any.whl (93 kB)
+Requirement already satisfied: wheel in /usr/local/lib/python3.7/site-packages (from lightgbm>=2.3.1->pycaret->-r ./requirements.txt (line 12)) (0.36.2)
+Collecting ipython-genutils
+  Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Collecting jsonschema!=2.5.0,>=2.4
+  Downloading jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)
+Collecting jupyter-core
+  Downloading jupyter_core-4.7.1-py3-none-any.whl (82 kB)
+Collecting attrs>=17.4.0
+  Downloading attrs-20.3.0-py2.py3-none-any.whl (49 kB)
+Collecting pyrsistent>=0.14.0
+  Downloading pyrsistent-0.17.3.tar.gz (106 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-3.7.3-py3-none-any.whl (12 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /usr/local/lib/python3.7/site-packages (from pandas->pycaret->-r ./requirements.txt (line 12)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /usr/local/lib/python3.7/site-packages (from pandas->pycaret->-r ./requirements.txt (line 12)) (2021.1)
+Requirement already satisfied: requests>=2.24.0 in /usr/local/lib/python3.7/site-packages (from pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (2.25.1)
+Collecting missingno>=0.4.2
+  Downloading missingno-0.4.2-py3-none-any.whl (9.7 kB)
+Collecting confuse>=1.0.0
+  Downloading confuse-1.4.0-py2.py3-none-any.whl (21 kB)
+Collecting phik>=0.10.0
+  Downloading phik-0.11.2.tar.gz (1.1 MB)
+Collecting jinja2>=2.11.1
+  Downloading Jinja2-2.11.3-py2.py3-none-any.whl (125 kB)
+Collecting tangled-up-in-unicode>=0.0.6
+  Downloading tangled_up_in_unicode-0.0.7-py3-none-any.whl (3.1 MB)
+Collecting htmlmin>=0.1.12
+  Downloading htmlmin-0.1.12.tar.gz (19 kB)
+Collecting tqdm>=4.48.2
+  Downloading tqdm-4.59.0-py2.py3-none-any.whl (74 kB)
+Collecting visions[type_image_path]==0.6.0
+  Downloading visions-0.6.0-py3-none-any.whl (75 kB)
+Collecting networkx>=2.4
+  Downloading networkx-2.5-py3-none-any.whl (1.6 MB)
+Collecting imagehash
+  Downloading ImageHash-4.2.0-py2.py3-none-any.whl (295 kB)
+Collecting Pillow
+  Downloading Pillow-8.1.2-cp37-cp37m-manylinux1_x86_64.whl (2.2 MB)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.7/site-packages (from confuse>=1.0.0->pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (5.4.1)
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl (33 kB)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /usr/local/lib/python3.7/site-packages (from matplotlib->pycaret->-r ./requirements.txt (line 12)) (2.4.7)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (1.1 MB)
+Collecting cycler>=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting retrying>=1.3.3
+  Downloading retrying-1.3.3.tar.gz (10 kB)
+Collecting wcwidth
+  Downloading wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Requirement already satisfied: chardet<5,>=3.0.2 in /usr/local/lib/python3.7/site-packages (from requests>=2.24.0->pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (4.0.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.7/site-packages (from requests>=2.24.0->pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (1.26.4)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/site-packages (from requests>=2.24.0->pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (2020.12.5)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.7/site-packages (from requests>=2.24.0->pandas-profiling>=2.8.0->pycaret->-r ./requirements.txt (line 12)) (2.10)
+Collecting notebook>=4.4.1
+  Downloading notebook-6.2.0-py3-none-any.whl (9.5 MB)
+Collecting argon2-cffi
+  Downloading argon2_cffi-20.1.0-cp35-abi3-manylinux1_x86_64.whl (97 kB)
+Collecting terminado>=0.8.3
+  Downloading terminado-0.9.3-py3-none-any.whl (14 kB)
+Collecting prometheus-client
+  Downloading prometheus_client-0.9.0-py2.py3-none-any.whl (53 kB)
+Collecting Send2Trash>=1.5.0
+  Downloading Send2Trash-1.5.0-py3-none-any.whl (12 kB)
+Collecting pyzmq>=17
+  Downloading pyzmq-22.0.3-cp37-cp37m-manylinux1_x86_64.whl (1.1 MB)
+Collecting nbconvert
+  Downloading nbconvert-6.0.7-py3-none-any.whl (552 kB)
+Collecting numpy>=1.17
+  Downloading numpy-1.19.5-cp37-cp37m-manylinux2010_x86_64.whl (14.8 MB)
+Requirement already satisfied: cffi>=1.0.0 in /usr/local/lib/python3.7/site-packages (from argon2-cffi->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets->pycaret->-r ./requirements.txt (line 12)) (1.14.5)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.7/site-packages (from cffi>=1.0.0->argon2-cffi->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets->pycaret->-r ./requirements.txt (line 12)) (2.20)
+Collecting smart-open>=1.8.1
+  Downloading smart_open-4.2.0.tar.gz (119 kB)
+Collecting PyWavelets
+  Downloading PyWavelets-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (4.4 MB)
+Collecting zipp>=0.5
+  Downloading zipp-3.4.1-py3-none-any.whl (5.2 kB)
+Collecting typing-extensions>=3.6.4
+  Downloading typing_extensions-3.7.4.3-py3-none-any.whl (22 kB)
+Collecting docker>=4.0.0
+  Downloading docker-4.4.4-py2.py3-none-any.whl (147 kB)
+Collecting databricks-cli>=0.8.7
+  Downloading databricks-cli-0.14.3.tar.gz (54 kB)
+Collecting Flask
+  Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting sqlparse>=0.3.1
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+Collecting click>=7.0
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting prometheus-flask-exporter
+  Downloading prometheus_flask_exporter-0.18.1.tar.gz (21 kB)
+Collecting entrypoints
+  Downloading entrypoints-0.3-py2.py3-none-any.whl (11 kB)
+Collecting gitpython>=2.1.0
+  Downloading GitPython-3.1.14-py3-none-any.whl (159 kB)
+Collecting querystring-parser
+  Downloading querystring_parser-1.2.4-py2.py3-none-any.whl (7.9 kB)
+Collecting gunicorn
+  Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+Requirement already satisfied: protobuf>=3.6.0 in /usr/local/lib/python3.7/site-packages (from mlflow->pycaret->-r ./requirements.txt (line 12)) (3.15.6)
+Collecting alembic<=1.4.1
+  Downloading alembic-1.4.1.tar.gz (1.1 MB)
+Collecting sqlalchemy
+  Downloading SQLAlchemy-1.4.1-cp37-cp37m-manylinux2014_x86_64.whl (1.5 MB)
+Collecting cloudpickle
+  Downloading cloudpickle-1.6.0-py3-none-any.whl (23 kB)
+Collecting Mako
+  Downloading Mako-1.1.4-py2.py3-none-any.whl (75 kB)
+Collecting python-editor>=0.3
+  Downloading python_editor-1.0.4-py3-none-any.whl (4.9 kB)
+Collecting tabulate>=0.7.7
+  Downloading tabulate-0.8.9-py3-none-any.whl (25 kB)
+Requirement already satisfied: websocket-client>=0.32.0 in /usr/local/lib/python3.7/site-packages (from docker>=4.0.0->mlflow->pycaret->-r ./requirements.txt (line 12)) (0.58.0)
+Collecting gitdb<5,>=4.0.1
+  Downloading gitdb-4.0.5-py3-none-any.whl (63 kB)
+Collecting smmap<4,>=3.0.1
+  Downloading smmap-3.0.5-py2.py3-none-any.whl (25 kB)
+Collecting greenlet!=0.4.17
+  Downloading greenlet-1.0.0-cp37-cp37m-manylinux2010_x86_64.whl (160 kB)
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting nbclient<0.6.0,>=0.5.0
+  Downloading nbclient-0.5.3-py3-none-any.whl (82 kB)
+Collecting mistune<2,>=0.8.1
+  Downloading mistune-0.8.4-py2.py3-none-any.whl (16 kB)
+Collecting bleach
+  Downloading bleach-3.3.0-py2.py3-none-any.whl (283 kB)
+Collecting pandocfilters>=1.4.1
+  Downloading pandocfilters-1.4.3.tar.gz (16 kB)
+Collecting testpath
+  Downloading testpath-0.4.4-py2.py3-none-any.whl (163 kB)
+Collecting defusedxml
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jupyterlab-pygments
+  Downloading jupyterlab_pygments-0.1.2-py2.py3-none-any.whl (4.6 kB)
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.5.1-py3-none-any.whl (5.0 kB)
+Collecting async-generator
+  Downloading async_generator-1.10-py3-none-any.whl (18 kB)
+Requirement already satisfied: packaging in /usr/local/lib/python3.7/site-packages (from bleach->nbconvert->notebook>=4.4.1->widgetsnbextension~=3.5.0->ipywidgets->pycaret->-r ./requirements.txt (line 12)) (20.9)
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting regex
+  Downloading regex-2021.3.17-cp37-cp37m-manylinux2014_x86_64.whl (721 kB)
+Collecting numexpr
+  Downloading numexpr-2.7.3-cp37-cp37m-manylinux2010_x86_64.whl (471 kB)
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+Collecting funcy
+  Downloading funcy-1.15-py2.py3-none-any.whl (32 kB)
+Collecting numba>=0.35
+  Downloading numba-0.53.0-cp37-cp37m-manylinux2014_x86_64.whl (3.4 MB)
+Collecting statsmodels
+  Downloading statsmodels-0.12.2-cp37-cp37m-manylinux1_x86_64.whl (9.5 MB)
+Collecting llvmlite<0.37,>=0.36.0rc1
+  Downloading llvmlite-0.36.0-cp37-cp37m-manylinux2010_x86_64.whl (25.3 MB)
+Collecting thinc<8.1.0,>=8.0.2
+  Downloading thinc-8.0.2-cp37-cp37m-manylinux2014_x86_64.whl (1.1 MB)
+Collecting cymem<2.1.0,>=2.0.2
+  Downloading cymem-2.0.5-cp37-cp37m-manylinux2014_x86_64.whl (35 kB)
+Collecting pydantic<1.8.0,>=1.7.1
+  Downloading pydantic-1.7.3-cp37-cp37m-manylinux2014_x86_64.whl (9.1 MB)
+Collecting spacy-legacy<3.1.0,>=3.0.0
+  Downloading spacy_legacy-3.0.1-py2.py3-none-any.whl (7.0 kB)
+Collecting pathy>=0.3.5
+  Downloading pathy-0.4.0-py3-none-any.whl (36 kB)
+Collecting srsly<3.0.0,>=2.4.0
+  Downloading srsly-2.4.0-cp37-cp37m-manylinux2014_x86_64.whl (456 kB)
+Collecting murmurhash<1.1.0,>=0.28.0
+  Downloading murmurhash-1.0.5-cp37-cp37m-manylinux2014_x86_64.whl (20 kB)
+Collecting wasabi<1.1.0,>=0.8.1
+  Downloading wasabi-0.8.2-py3-none-any.whl (23 kB)
+Collecting preshed<3.1.0,>=3.0.2
+  Downloading preshed-3.0.5-cp37-cp37m-manylinux2014_x86_64.whl (126 kB)
+Collecting typer<0.4.0,>=0.3.0
+  Downloading typer-0.3.2-py3-none-any.whl (21 kB)
+Collecting blis<0.8.0,>=0.4.0
+  Downloading blis-0.7.4-cp37-cp37m-manylinux2014_x86_64.whl (9.8 MB)
+Collecting catalogue<2.1.0,>=2.0.1
+  Downloading catalogue-2.0.1-py3-none-any.whl (9.6 kB)
+Collecting smart-open>=1.8.1
+  Downloading smart_open-3.0.0.tar.gz (113 kB)
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /simple/patsy/
+Collecting patsy>=0.5
+  Downloading patsy-0.5.1-py2.py3-none-any.whl (231 kB)
+Collecting pynndescent>=0.5
+  Downloading pynndescent-0.5.2.tar.gz (1.1 MB)
+Building wheels for collected packages: accutuning-helpers, pycaret, cufflinks, htmlmin, phik, pyrsistent, retrying, alembic, databricks-cli, pandocfilters, nltk, prometheus-flask-exporter, pyLDAvis, future, pyod, smart-open, umap-learn, pynndescent
+  Building wheel for accutuning-helpers (setup.py): started
+  Building wheel for accutuning-helpers (setup.py): finished with status 'done'
+  Created wheel for accutuning-helpers: filename=accutuning_helpers-1.0.18-py3-none-any.whl size=27629 sha256=1274ec4b8e6bcfba4e3b644bcdf89b38c1455a52e9e2d8ea0cbf0574ed3ca013
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k1f3s3zx/wheels/4d/9c/8a/823ddf72bdb051144912a107bf2e913fa6c5271f95e7017d77
+  Building wheel for pycaret (setup.py): started
+  Building wheel for pycaret (setup.py): finished with status 'done'
+  Created wheel for pycaret: filename=pycaret-2.2.2-py3-none-any.whl size=249580 sha256=8a2fbf55f0e1efca48e7341e3462e1b6fd56142aa07bd992e28a1eec69a53f63
+  Stored in directory: /tmp/pip-ephem-wheel-cache-k1f3s3zx/wheels/d0/d4/4d/ee9ee8fc62690969b3b9f6943b27969f4ec12a370d22b06aa5
+  Building wheel for cufflinks (setup.py): started
+  Building wheel for cufflinks (setup.py): finished with status 'done'
+  Created wheel for cufflinks: filename=cufflinks-0.17.3-py3-none-any.whl size=67922 sha256=bfc51a8b72d6ee50af86cc98f11304923b6adf2ce1d50709d7d9bcdfceb737ce
+  Stored in directory: /root/.cache/pip/wheels/e1/27/13/3fe67fa7ea7be444b831d117220b3b586b872c9acd4df480d0
+  Building wheel for htmlmin (setup.py): started
+  Building wheel for htmlmin (setup.py): finished with status 'done'
+  Created wheel for htmlmin: filename=htmlmin-0.1.12-py3-none-any.whl size=27085 sha256=5537143d1a5d3f7787a19ad2f26624c3339e515729f3c4e517471ab3ad1e5387
+  Stored in directory: /root/.cache/pip/wheels/70/e1/52/5b14d250ba868768823940c3229e9950d201a26d0bd3ee8655
+  Building wheel for phik (setup.py): started
+  Building wheel for phik (setup.py): finished with status 'done'
+  Created wheel for phik: filename=phik-0.11.2-py3-none-any.whl size=1107412 sha256=08d948556561b1abab794247eb050b922bfe850e3ce42c9913f2d86bb9dd9a87
+  Stored in directory: /root/.cache/pip/wheels/40/98/a3/b654f24edcdcdb87d1f70d65a506fcfdf15289db129c594bcd
+  Building wheel for pyrsistent (setup.py): started
+  Building wheel for pyrsistent (setup.py): finished with status 'done'
+  Created wheel for pyrsistent: filename=pyrsistent-0.17.3-cp37-cp37m-linux_x86_64.whl size=55874 sha256=18f4aa15031a8972196e28cdff7736199374b97be12c3c4219c2e20902238fb3
+  Stored in directory: /root/.cache/pip/wheels/a5/52/bf/71258a1d7b3c8cbe1ee53f9314c6f65f20385481eaee573cc5
+  Building wheel for retrying (setup.py): started
+  Building wheel for retrying (setup.py): finished with status 'done'
+  Created wheel for retrying: filename=retrying-1.3.3-py3-none-any.whl size=11429 sha256=3ec660cd85cd4d0bc18fccafe156354c8009d74b4a539582ed8164be81780ce8
+  Stored in directory: /root/.cache/pip/wheels/f9/8d/8d/f6af3f7f9eea3553bc2fe6d53e4b287dad18b06a861ac56ddf
+  Building wheel for alembic (setup.py): started
+  Building wheel for alembic (setup.py): finished with status 'done'
+  Created wheel for alembic: filename=alembic-1.4.1-py2.py3-none-any.whl size=158155 sha256=7d5d25d4948b3ed606ac94edc4f4d4e3df7c68279a124fb81d0109e556e799e4
+  Stored in directory: /root/.cache/pip/wheels/be/5d/0a/9e13f53f4f5dfb67cd8d245bb7cdffe12f135846f491a283e3
+  Building wheel for databricks-cli (setup.py): started
+  Building wheel for databricks-cli (setup.py): finished with status 'done'
+  Created wheel for databricks-cli: filename=databricks_cli-0.14.3-py3-none-any.whl size=100555 sha256=316afa971fd5e0d0aa784066fd1bf11a2592b9ca52c25d0cb0b0b6b9964792f1
+  Stored in directory: /root/.cache/pip/wheels/3b/60/14/6930445b08959fbdf4e3029bac7e1f2cccb2e94df8afa00b29
+  Building wheel for pandocfilters (setup.py): started
+  Building wheel for pandocfilters (setup.py): finished with status 'done'
+  Created wheel for pandocfilters: filename=pandocfilters-1.4.3-py3-none-any.whl size=7992 sha256=cca8ba24fc1eeb3a22406040cc81af11eb946088f1f0318cc6160d8a19fa96c3
+  Stored in directory: /root/.cache/pip/wheels/42/81/34/545dc2fbf0e9137811e901108d37fc04650e81d48f97078000
+  Building wheel for nltk (setup.py): started
+  Building wheel for nltk (setup.py): finished with status 'done'
+  Created wheel for nltk: filename=nltk-3.5-py3-none-any.whl size=1434676 sha256=4f9c7ea80444ecc3735a3cdf84d32e63f3547a3da5c115cc9b12786006ee242b
+  Stored in directory: /root/.cache/pip/wheels/45/6c/46/a1865e7ba706b3817f5d1b2ff7ce8996aabdd0d03d47ba0266
+  Building wheel for prometheus-flask-exporter (setup.py): started
+  Building wheel for prometheus-flask-exporter (setup.py): finished with status 'done'
+  Created wheel for prometheus-flask-exporter: filename=prometheus_flask_exporter-0.18.1-py3-none-any.whl size=17158 sha256=1098b87faa6f69d5ed0514ee317e27c33e4b4f40cf79e3452231bd0029f3de1f
+  Stored in directory: /root/.cache/pip/wheels/c4/b6/b5/e76659f3b2a3a226565e27f0a7eb7a3ac93c3f4d68acfbe617
+  Building wheel for pyLDAvis (setup.py): started
+  Building wheel for pyLDAvis (setup.py): finished with status 'done'
+  Created wheel for pyLDAvis: filename=pyLDAvis-3.2.2-py2.py3-none-any.whl size=135593 sha256=a50069b625a7de3acd0b9c774d4495f2ec3e1bcaf1cf101ce6f30ea345b9487f
+  Stored in directory: /root/.cache/pip/wheels/f8/b1/9b/560ac1931796b7303f7b517b949d2d31a4fbc512aad3b9f284
+  Building wheel for future (setup.py): started
+  Building wheel for future (setup.py): finished with status 'done'
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491059 sha256=86cae94608f19b17c5e1b44fadd3df4dfd78290e032bb7629908682c77db310a
+  Stored in directory: /root/.cache/pip/wheels/56/b0/fe/4410d17b32f1f0c3cf54cdfb2bc04d7b4b8f4ae377e2229ba0
+  Building wheel for pyod (setup.py): started
+  Building wheel for pyod (setup.py): finished with status 'done'
+  Created wheel for pyod: filename=pyod-0.8.7-py3-none-any.whl size=115977 sha256=17ec2d3099167a365274a7696b847f6c6e17dcecd91cd013239f3b0eafef92ac
+  Stored in directory: /root/.cache/pip/wheels/b2/ef/b6/3375e239feb7768b5fc35846a0cc22e04312b7c813de07c4dc
+  Building wheel for smart-open (setup.py): started
+  Building wheel for smart-open (setup.py): finished with status 'done'
+  Created wheel for smart-open: filename=smart_open-3.0.0-py3-none-any.whl size=107097 sha256=2366041db8f70589c9ebb9978e79dbb4a791bec4f06adb1c2d6e2b57150018de
+  Stored in directory: /root/.cache/pip/wheels/83/a6/12/bf3c1a667bde4251be5b7a3368b2d604c9af2105b5c1cb1870
+  Building wheel for umap-learn (setup.py): started
+  Building wheel for umap-learn (setup.py): finished with status 'done'
+  Created wheel for umap-learn: filename=umap_learn-0.5.1-py3-none-any.whl size=76566 sha256=d4d7b67d731d35b52e975affd431772479dc640f2b475e4276af58c5924d48b9
+  Stored in directory: /root/.cache/pip/wheels/01/e7/bb/347dc0e510803d7116a13d592b10cc68262da56a8eec4dd72f
+  Building wheel for pynndescent (setup.py): started
+  Building wheel for pynndescent (setup.py): finished with status 'done'
+  Created wheel for pynndescent: filename=pynndescent-0.5.2-py3-none-any.whl size=51347 sha256=0136ac4321178252bf9befeaac574e24088f78badc9108486fe71d2789c84694
+  Stored in directory: /root/.cache/pip/wheels/62/0b/55/40d651c5a4106ea9ce68d014335a1c7bf059530722c0107b15
+Successfully built accutuning-helpers pycaret cufflinks htmlmin phik pyrsistent retrying alembic databricks-cli pandocfilters nltk prometheus-flask-exporter pyLDAvis future pyod smart-open umap-learn pynndescent
+Installing collected packages: zipp, typing-extensions, ipython-genutils, traitlets, pyrsistent, importlib-metadata, attrs, wcwidth, pyzmq, ptyprocess, parso, jupyter-core, jsonschema, webencodings, pygments, prompt-toolkit, pickleshare, pexpect, nest-asyncio, nbformat, MarkupSafe, jupyter-client, jedi, decorator, backcall, async-generator, testpath, pandocfilters, nbclient, mistune, jupyterlab-pygments, jinja2, IPython, entrypoints, defusedxml, bleach, terminado, Send2Trash, prometheus-client, Pillow, numpy, nbconvert, kiwisolver, ipykernel, cycler, argon2-cffi, Werkzeug, tangled-up-in-unicode, smmap, PyWavelets, pandas, notebook, networkx, murmurhash, matplotlib, llvmlite, itsdangerous, greenlet, cymem, click, catalogue, widgetsnbextension, wasabi, visions, typer, tqdm, tabulate, srsly, sqlalchemy, smart-open, seaborn, scikit-learn, retrying, regex, python-editor, pydantic, preshed, patsy, numba, Mako, jupyterlab-widgets, imagehash, gitdb, Flask, blis, thinc, statsmodels, sqlparse, spacy-legacy, querystring-parser, pynndescent, prometheus-flask-exporter, plotly, phik, pathy, numexpr, nltk, missingno, ipywidgets, htmlmin, gunicorn, graphviz, gitpython, future, funcy, docker, databricks-cli, confuse, colorlover, cloudpickle, alembic, yellowbrick, xgboost, wordcloud, umap-learn, textblob, spacy, scikit-plot, pyod, pyLDAvis, pandas-profiling, mlxtend, mlflow, lightgbm, kmodes, imbalanced-learn, gensim, cufflinks, catboost, pycaret, accutuning-helpers
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.20.1
+    Uninstalling numpy-1.20.1:
+      Successfully uninstalled numpy-1.20.1
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 0.24.1
+    Uninstalling scikit-learn-0.24.1:
+      Successfully uninstalled scikit-learn-0.24.1
+Successfully installed Flask-1.1.2 IPython-7.21.0 Mako-1.1.4 MarkupSafe-1.1.1 Pillow-8.1.2 PyWavelets-1.1.1 Send2Trash-1.5.0 Werkzeug-1.0.1 accutuning-helpers-1.0.18 alembic-1.4.1 argon2-cffi-20.1.0 async-generator-1.10 attrs-20.3.0 backcall-0.2.0 bleach-3.3.0 blis-0.7.4 catalogue-2.0.1 catboost-0.24.4 click-7.1.2 cloudpickle-1.6.0 colorlover-0.3.0 confuse-1.4.0 cufflinks-0.17.3 cycler-0.10.0 cymem-2.0.5 databricks-cli-0.14.3 decorator-4.4.2 defusedxml-0.7.1 docker-4.4.4 entrypoints-0.3 funcy-1.15 future-0.18.2 gensim-3.8.3 gitdb-4.0.5 gitpython-3.1.14 graphviz-0.16 greenlet-1.0.0 gunicorn-20.0.4 htmlmin-0.1.12 imagehash-4.2.0 imbalanced-learn-0.7.0 importlib-metadata-3.7.3 ipykernel-5.5.0 ipython-genutils-0.2.0 ipywidgets-7.6.3 itsdangerous-1.1.0 jedi-0.18.0 jinja2-2.11.3 jsonschema-3.2.0 jupyter-client-6.1.12 jupyter-core-4.7.1 jupyterlab-pygments-0.1.2 jupyterlab-widgets-1.0.0 kiwisolver-1.3.1 kmodes-0.11.0 lightgbm-3.1.1 llvmlite-0.36.0 matplotlib-3.3.4 missingno-0.4.2 mistune-0.8.4 mlflow-1.14.1 mlxtend-0.18.0 murmurhash-1.0.5 nbclient-0.5.3 nbconvert-6.0.7 nbformat-5.1.2 nest-asyncio-1.5.1 networkx-2.5 nltk-3.5 notebook-6.2.0 numba-0.53.0 numexpr-2.7.3 numpy-1.19.5 pandas-1.2.3 pandas-profiling-2.11.0 pandocfilters-1.4.3 parso-0.8.1 pathy-0.4.0 patsy-0.5.1 pexpect-4.8.0 phik-0.11.2 pickleshare-0.7.5 plotly-4.14.3 preshed-3.0.5 prometheus-client-0.9.0 prometheus-flask-exporter-0.18.1 prompt-toolkit-3.0.17 ptyprocess-0.7.0 pyLDAvis-3.2.2 pycaret-2.2.2 pydantic-1.7.3 pygments-2.8.1 pynndescent-0.5.2 pyod-0.8.7 pyrsistent-0.17.3 python-editor-1.0.4 pyzmq-22.0.3 querystring-parser-1.2.4 regex-2021.3.17 retrying-1.3.3 scikit-learn-0.23.2 scikit-plot-0.3.7 seaborn-0.11.1 smart-open-3.0.0 smmap-3.0.5 spacy-3.0.5 spacy-legacy-3.0.1 sqlalchemy-1.4.1 sqlparse-0.4.1 srsly-2.4.0 statsmodels-0.12.2 tabulate-0.8.9 tangled-up-in-unicode-0.0.7 terminado-0.9.3 testpath-0.4.4 textblob-0.15.3 thinc-8.0.2 tqdm-4.59.0 traitlets-5.0.5 typer-0.3.2 typing-extensions-3.7.4.3 umap-learn-0.5.1 visions-0.6.0 wasabi-0.8.2 wcwidth-0.2.5 webencodings-0.5.1 widgetsnbextension-3.5.1 wordcloud-1.8.1 xgboost-1.3.3 yellowbrick-1.3.post1 zipp-3.4.1
+INFO[0179] Taking snapshot of full filesystem...        
+INFO[0252] RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* 
+INFO[0252] cmd: /bin/sh                                 
+INFO[0252] args: [-c rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*] 
+INFO[0252] Running: [/bin/sh -c rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*] 
+INFO[0252] Taking snapshot of full filesystem...        
+INFO[0255] ENTRYPOINT ["run_sklearnserver"]             
+INFO[0255] Pushing image to airuntime.net/tekton/dummyproject-seoul-dummy-model:v0.1.0 
+INFO[0493] Pushed image to 1 destinations               

@@ -1,0 +1,16 @@
+customresourcedefinition.apiextensions.k8s.io/extensions.dashboard.tekton.dev created
+serviceaccount/tekton-dashboard created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-backend created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-dashboard created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-extensions created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-pipelines created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-tenant created
+clusterrole.rbac.authorization.k8s.io/tekton-dashboard-triggers created
+clusterrolebinding.rbac.authorization.k8s.io/tekton-dashboard-backend created
+service/tekton-dashboard created
+deployment.apps/tekton-dashboard created
+rolebinding.rbac.authorization.k8s.io/tekton-dashboard-pipelines created
+rolebinding.rbac.authorization.k8s.io/tekton-dashboard-dashboard created
+rolebinding.rbac.authorization.k8s.io/tekton-dashboard-triggers created
+clusterrolebinding.rbac.authorization.k8s.io/tekton-dashboard-tenant created
+clusterrolebinding.rbac.authorization.k8s.io/tekton-dashboard-extensions created

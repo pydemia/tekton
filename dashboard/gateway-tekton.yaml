@@ -1,0 +1,71 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: tekton-dashboard
+  namespace: tekton-pipelines
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+    - tekton.example.com
+  # - port:
+  #     number: 443
+  #     name: https
+  #     protocol: HTTPS
+  #   tls:
+  #     mode: SIMPLE
+  #     credentialName: ingress-tls-prd
+  #   hosts:
+  #   - app.airuntime.com
+  #   - app.dev.airuntime.com
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: tekton-dashboard
+  namespace: tekton-pipelines
+spec:
+  hosts:
+  - "*"
+  - tekton.example.com
+  gateways:
+  - tekton-dashboard
+  http:
+  - route:
+    - destination:
+        host: tekton-dashboard
+        port:
+          number: 9097
+      # headers:
+      #   request:
+      #     set:
+      #     add:
+      #     remove:
+      #   response:
+      #     remove:
+      #     - foo
+    # rewrite:
+    #   uri: /
+    # rewrite:
+    # Rewrite the original host header to the host header of Search service
+    # in order to redirect requests to Search service.
+    #   authority: kiali.istio-system.svc.cluster.local
+    #   uri: /
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: tekton-dashboard
+  namespace: tekton-pipelines
+spec:
+  host: tekton-dashboard
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+---
